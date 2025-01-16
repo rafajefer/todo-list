@@ -1,0 +1,17 @@
+services:
+  client:
+    build:
+      context: .
+    container_name: app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    networks:
+      - custom_network
+    restart: always
+    # command: npm run serve -- --port 3000 --host 0.0.0.0
+    command: npm run serve-docker
+networks:
+  custom_network:
+    driver: bridge 
