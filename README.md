@@ -8,12 +8,19 @@ Clone Repositório
 git clone -b laravel-11-with-php-8.3 https://github.com/rafajefer/todo-list.git todo-list
 ```
 ```sh
-cd todo-list
+cd todo-list/vue3
+```
+
+
+### Instale as dependências do projeto
+```sh
+docker build -t app-image:latest .
+docker run --rm -it --name app-container -p 3000:3000 -v $(pwd):/app app-image:latest /bin/bash
+npm install
 ```
 
 ### Inicie o client com vue3 com docker
 ```sh
-cd vu3
 docker compose up -d
 ```
 
@@ -24,9 +31,5 @@ docker exec -it app bash
 ```
 
 
-Instale as dependências do projeto
-```sh
-npm install
-```
 Acesse o projeto
 [http://localhost:3000](http://localhost:3000)
