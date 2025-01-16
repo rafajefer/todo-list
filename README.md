@@ -5,7 +5,7 @@
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone -b laravel-11-with-php-8.3 https://github.com/rafajefer/todo-list.git todo-list
+git clone https://github.com/rafajefer/todo-list.git todo-list
 ```
 ```sh
 cd todo-list/vue3
