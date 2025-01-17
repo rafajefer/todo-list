@@ -34,3 +34,6 @@ docker exec -it app bash
 
 Acesse o projeto
 [http://localhost:3000](http://localhost:3000)
+
+Acessando api fake do projeto criada com json-server
+[http://localhost:5000/todos](http://localhost:5000/todos)
