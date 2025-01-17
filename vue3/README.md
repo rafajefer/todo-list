@@ -16,6 +16,7 @@ cd todo-list/vue3
 ```sh
 docker build -t app-image:latest .
 docker run --rm -it --name app-container -p 3000:3000 -v $(pwd):/app app-image:latest bash
+cp .env.sample .env
 npm install
 CTRL D -> para sair
 ```
