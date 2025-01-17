@@ -1,24 +1,36 @@
-# vue3
+# todo-list
 
-## Project setup
+
+
+### Passo a passo
+Clone Repositório
+```sh
+git clone https://github.com/rafajefer/todo-list.git todo-list
 ```
+```sh
+cd todo-list/vue3
+```
+
+
+### Instale as dependências do projeto
+```sh
+docker build -t app-image:latest .
+docker run --rm -it --name app-container -p 3000:3000 -v $(pwd):/app app-image:latest bash
 npm install
+CTRL D -> para sair
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+### Inicie o client com vue3 com docker
+```sh
+docker compose up -d
 ```
 
-### Lints and fixes files
-```
-npm run lint
+Acesse o container app
+```sh
+docker exec -it app bash
+# docker exec -it app /bin/sh
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Acesse o projeto
+[http://localhost:3000](http://localhost:3000)
