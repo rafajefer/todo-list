@@ -18,8 +18,9 @@ docker build -t app-image:latest .
 docker run --rm -it --name app-container -p 3000:3000 -v $(pwd):/app app-image:latest bash
 cp .env.sample .env
 npm install
-CTRL D -> para sair
 ```
+
+Utilize o CTRL D para sair
 
 ### Inicie o client com vue3 com docker
 ```sh
@@ -29,7 +30,16 @@ docker compose up -d
 Acesse o container app
 ```sh
 docker exec -it app bash
-# docker exec -it app /bin/sh
+```
+
+### Para encerrar o client
+```sh
+docker compose down
+```
+
+### Para da permissão em arquivos/pastas
+```sh
+sudo chown $USER:$USER .
 ```
 
 
