@@ -11,11 +11,14 @@ git clone https://github.com/rafajefer/todo-list.git todo-list
 cd todo-list/vue3
 ```
 
-
-### Instale as dependências do projeto
+### Buildando imagem e executando
 ```sh
 docker build -t app-image:latest .
 docker run --rm -it --name app-container -p 3000:3000 -v $(pwd):/app app-image:latest bash
+```
+
+### Instale as dependências do projeto
+```sh
 cp .env.sample .env
 npm install
 ```
